@@ -19,7 +19,9 @@ export function StreamerProvider({children}) {
                 setData(data);
     
                 if(!data.data[0]) {
-                    resetInfo();    
+                    setStatus("offline");
+                    setThumbnailUrl("https://m.media-amazon.com/images/M/MV5BNzU3MjZmYjUtM2JjYS00ZjY3LWI2YzQtYjRmYTJmNTJhZGRmXkEyXkFqcGdeQXVyNDk2MzgwNjE@._V1_FMjpg_UX1000_.jpg");
+                    setData({data:[]});   
                 } else {
                     data.data[0].type === "live" ? setStatus("live") : setStatus("unknown");
                     let thumbnail = String(data.data[0].thumbnail_url.replace("{width}", "1920").replace("{height}", "1280"));
