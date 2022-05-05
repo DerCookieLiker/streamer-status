@@ -11,7 +11,12 @@
     height: 4rem;
     padding: .5rem;
     align-items: center;
-    justify-content: center;
+}
+
+.toolbar-middle {
+    margin: auto;
+    display: flex;
+    gap: 1rem;
 }
 
 .toolbar-btn {
@@ -22,4 +27,27 @@
     font-size: 1.5rem;
     cursor: pointer;
     transition: all .2s ease-in-out;
+}
+
+
+.toolbar-link > a > img {
+    width: 32px;
+    height: 32px;
+}
+
+.toolbar-link > a > svg {
+    width: 32px;
+    height: 32px;
+    fill: white;
+    transition: fill .2s ease-in-out;
+}
+
+.toolbar-link > a:hover > svg {
+    fill: #cacaca;
+}
+
+.toolbar-left {
+    padding: .5rem;
+    display: flex;
+    gap: 1rem;
 }
